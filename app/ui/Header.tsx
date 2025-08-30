@@ -6,10 +6,10 @@ const Header = () => {
   return (
     <header className="w-full py-4 px-10 border-b-1 border-black dark:border-neutral-700 grid grid-cols-3">
       <div className="flex gap-8 items-center">
-        <Link href="/products?category=1">Men</Link>
-        <Link href="/products?category=2">Women</Link>
-        <Link href="/products?category=3">Kids</Link>
-        <Link href="/products?category=4">Accessories</Link>
+        <Link href="/products/men">Men</Link>
+        <Link href="/products/women">Women</Link>
+        <Link href="/products/kids">Kids</Link>
+        <Link href="/products/accessories">Accessories</Link>
       </div>
       <div className="flex items-center justify-center">
         <Link href="/">
