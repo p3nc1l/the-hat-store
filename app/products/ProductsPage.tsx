@@ -22,8 +22,12 @@ const GridItem = ({ product }: { product: Product }) => {
       <Card className="h-full flex flex-col justify-between">
         <CardHeader>
           <AspectRatio ratio={1 / 1} className="flex items-center justify-center bg-neutral-100 dark:bg-neutral-800">
-            <span>No image</span>
-            {product.imageUrls && <Image src={product.imageUrls[0]} alt={product.name} layout="fill" objectFit="cover" />}
+            {product.imageUrls ? 
+            <>
+              <Skeleton className="w-full h-full bg-neutral-300 dark:bg-neutral-600 rounded-none" />
+              <Image src={product.imageUrls[0]} alt={product.name} layout="fill" objectFit="cover" />
+            </> : 
+            <span>No image</span>}
           </AspectRatio>
         </CardHeader>
         <CardContent>
